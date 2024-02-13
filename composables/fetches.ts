@@ -15,7 +15,7 @@ export const useBaseFetch = async (path: string, options?: NitroFetchOptions<`${
     }
 
     if (process.server) {
-        const origin = 'https://guestbook-frontend.indigital-dev.com'
+        const origin = config.url
         const requestHeaders = useRequestHeaders(['cookie'])
         headers = {
             ...headers,

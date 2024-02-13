@@ -6,11 +6,12 @@ export default defineNuxtConfig({
     port: 3020
   },
   runtimeConfig: {
-    apiBase: '', // can be overridden by NUXT_API_SECRET environment variable
+    apiBase: '',
+    url: '',
     public: {
-      apiBase: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
-      pusherKey: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
-      pusherCluster: '', // can be overridden by NUXT_PUBLIC_API_BASE environment variable
+      apiBase: '',
+      pusherKey: '',
+      pusherCluster: '',
     }
   },
 })
