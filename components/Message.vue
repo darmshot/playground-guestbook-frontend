@@ -79,7 +79,10 @@ onMounted(() => {
         console.log('Fire MessageCreated:', e.message);
 
         data.value.data.unshift(e.message)
-        data.value.data.splice(-1)
+
+        if (data.value.data.length > data.value.meta.per_page) {
+          data.value.data.splice(-1)
+        }
 
         Echo.private(`messages.${e.message.id}`)
             .listen('MessageAnswered', (e: { message: Message }) => {
