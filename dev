@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-docker run -v $PWD:/src -w /src -it -p 24678:24678 -p 3020:3020 --user 1000:1000 --rm --network sail node:20.8.0-slim yarn dev
+docker run -v $PWD:/src -w /src -it -p 24678:24678 -p 3020:3020 --user 1000:1000 --rm --network guestbook-network node:20.8.0-slim yarn dev
